@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:o;
+}
+ul,ol{
+    list-style:none;
+}
+a,a:link{
+    text-decoration:none;
+    color:unset;
+}
