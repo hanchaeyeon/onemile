@@ -86,13 +86,20 @@ a,a:link{
 
 /* visual */
 #visual{
-    width:724px;
+    width:630px;
     height:523px;
     position: absolute;
     left:50%;
     transform:translateX(-50%);
     top:250px;
     font-size:0;
+}
+#visual img:nth-child(1){
+    margin-top:160px;
+}
+#visual img:nth-child(2){
+    position: absolute;
+    right:0;
 }
 
 
