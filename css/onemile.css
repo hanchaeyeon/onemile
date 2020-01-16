@@ -83,20 +83,18 @@ a,a:link{
 #icon li:hover{
     opacity:1;
 }
+
+/* visual */
 #visual{
-    width:469px;
+    width:724px;
     height:523px;
-    z-index:1000;
     position: absolute;
     left:50%;
-    transform:translateX(-40%);
-    bottom:-100px;
+    transform:translateX(-50%);
+    top:250px;
+    font-size:0;
 }
-#slogan{
-    position: absolute;
-    top:56%;
-    left:360px;
-}
+
 
 /* #special */
 #special{
