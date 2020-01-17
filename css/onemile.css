@@ -32,7 +32,8 @@ a,a:link{
     content:'';
     display:block;
     clear:both;
-    position:fixed; /*위에서 공간을 줄 수 있다*/
+    position:absolute;
+    /* position:fixed; 위에서 공간을 줄 수 있다 */
     top:71px; /*계산값 : 로고 31px+ padding 위,아래 20px 총 71px*/
     left:0;
     width:100%;
@@ -109,22 +110,25 @@ a,a:link{
 /* #special */
 #special{
     width:100%;
-    height:500px;
-    margin-top:160px;
+    height:600px;
+    /* margin-top:160px; */
     background:#f3f3f3;
     overflow:hidden;
 }
 .special_wrap{
     width:1000px;
-    margin:0 auto;
+    margin:100px auto;
 }
 #special h2{
     font-size:24px;
-    font-weight:700;
-    color:#888, #ff8e00;
-    padding:40px 0;
+    font-weight:700; /*100~900, blod, bloder, thin*/
+    color: #888;
+    padding:50px 0;
     text-align:center;
     text-transform:uppercase;
+}
+#special h2 strong{
+    color:#ff8e00;
 }
 #special ul{
     font-size:0;
@@ -133,7 +137,16 @@ a,a:link{
     width:300px;
     height:300px;
     display:inline-block;
+    /*가로로 컨텐츠 배치하기 
+    1. display:inline-block; inline와 block요소의 특징을 가진 요소
+    2. float:left; 단점 : 크기를 늘릴 수 없다..?
+    3. display:flex; 최신기능인데 일부 부라우저는 아직..
+    4. display:table-cell, table-row, table; --> ex) special에게 table, ul에게 tr, li에게 td
+    */
     border-radius:50%;
+    overflow:hidden;
+    /*원안에 이미지를 넣기 위해서 border-radius:50%;와 overfolow:hidden을 사용
+    비율이 중요하다. 정원을 만들려면 사진의 비율이 1:1이여야 한다. 비율을 다르게하면 타원이 될 수 있다.*/
 }
 #special li:nth-child(1){
     margin-left:30px;
@@ -143,4 +156,46 @@ a,a:link{
 }
 #special li:nth-child(3){
     margin-right:30px;
+}
+#special ul li img{
+    transition: all .3s; /* all = any css property */
+}
+#special ul li:hover img{
+    transform:scale(1.1); /* 넓이, 높이가 1.1배 확대*/
+}
+
+/* #footer */
+#footer{
+    position:relative;
+}
+#aside:before{
+    content:'';
+    display:block;
+    width:100%;
+    height:1px;
+    background:#ddd;
+    position:absolute;
+    left:0;
+    top:50px;
+}
+#aside:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+#aside, .info{
+    width:1000px;
+    margin:0 auto;
+}
+#aside>div{
+    padding:20px 0;
+    float: left;
+    height:50px;
+    box-sizing:border-box;
+}
+#aside ul{
+    float: right;
+}
+#aside ul li{
+    display:inline-block;
 }
