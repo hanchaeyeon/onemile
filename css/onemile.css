@@ -74,6 +74,7 @@ a,a:link{
 #icon{
     width:100px;
     float:right;
+    font-size:0;
 }
 #icon li{
     display: inline-block;
@@ -82,6 +83,9 @@ a,a:link{
 }
 #icon li:hover{
     opacity:1;
+}
+#icon li:nth-child(2){
+    margin: 0 3px 0 4px;
 }
 
 /* visual */
@@ -101,7 +105,6 @@ a,a:link{
     position: absolute;
     right:0;
 }
-
 
 /* #special */
 #special{
@@ -126,11 +129,11 @@ a,a:link{
 #special ul{
     font-size:0;
 }
-#special li{
+#special ul li{
     width:300px;
     height:300px;
     display:inline-block;
-    border-radius:
+    border-radius:50%;
 }
 #special li:nth-child(1){
     margin-left:30px;
